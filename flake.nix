@@ -10,6 +10,7 @@
             pkgs = nixpkgs.legacyPackages.x86_64-linux;
             pkgs-old = nixpkgs-23.legacyPackages.x86_64-linux;
         in pkgs.mkShell {
+            LOCALE_ARCHIVE = if pkgs.stdenv.isLinux then "${pkgs.glibcLocales}/lib/locale/locale-archive" else "";
             buildInputs = [
             pkgs.python312
 #            pkgs.poetry
