@@ -30,6 +30,7 @@
             pkgs.python312Packages.dramatiq
 
             pkgs.python312Packages.pydantic
+            pkgs.python312Packages.pydantic-settings
             pkgs.python312Packages.email-validator
 #            pkgs.python312Packages.alembic
 #
