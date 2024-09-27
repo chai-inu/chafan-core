@@ -49,11 +49,12 @@
             pkgs.python312Packages.python-multipart
             pkgs.python312Packages.parsel
 
-            pkgs.python312Packages.fastapi-mail
-#            pkgs.python312Packages.alembic
+            pkgs.python312Packages.websockets
+
+            pkgs.python312Packages.alembic
 #
 #
-#            pkgs.postgresql
+            pkgs.postgresql
             ];
         };
   };
