@@ -19,7 +19,6 @@
             pkgs.python312Packages.slowapi
             pkgs.python312Packages.shortuuid
             pkgs.python312Packages.starlette
-            pkgs.python312Packages.sqlalchemy
             pkgs.python312Packages.pytz
             pkgs.python312Packages.python-jose
             pkgs.python312Packages.passlib
@@ -32,6 +31,25 @@
             pkgs.python312Packages.pydantic
             pkgs.python312Packages.pydantic-settings
             pkgs.python312Packages.email-validator
+
+            pkgs.python312Packages.requests
+            pkgs.python312Packages.arrow
+            pkgs.python312Packages.redis
+            pkgs.python312Packages.html2text
+            pkgs.python312Packages.jinja2
+            pkgs.python312Packages.pymongo
+
+            pkgs.python312Packages.jieba
+            pkgs.python312Packages.whoosh
+
+            pkgs.python312Packages.sqlalchemy
+            pkgs.python312Packages.psycopg2
+
+            pkgs.python312Packages.pika
+            pkgs.python312Packages.python-multipart
+            pkgs.python312Packages.parsel
+
+            pkgs.python312Packages.fastapi-mail
 #            pkgs.python312Packages.alembic
 #
 #
