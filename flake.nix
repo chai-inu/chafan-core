@@ -55,7 +55,8 @@
             pkgs.python312Packages.alembic
 #
 #
-            pkgs.postgresql
+            pkgs.postgresql_14
+            pkgs.pgadmin4
             ];
         };
   };
