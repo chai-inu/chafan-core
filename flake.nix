@@ -1,15 +1,15 @@
 {
   inputs = {
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     #nixpkgs-23.url = "github:nixos/nixpkgs/nixos-22.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
   outputs = { self, nixpkgs, nixpkgs-unstable, flake-utils}: {
     devShell.x86_64-linux =
         let
-            pkgs = nixpkgs.legacyPackages.x86_64-linux;
-            pkgs_unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
+            pkgs = nixpkgs-unstable.legacyPackages.x86_64-linux;
+            #pkgs_unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
         in pkgs.mkShell {
             LOCALE_ARCHIVE = if pkgs.stdenv.isLinux then "${pkgs.glibcLocales}/lib/locale/locale-archive" else "";
             buildInputs = [
@@ -27,7 +27,7 @@
             pkgs.python312Packages.boto3
             # Sentry migrate
             # https://github.com/getsentry/sentry-python/commit/570307c946020e9fefdb22904585170cd6d2717d
-            pkgs_unstable.python312Packages.sentry-sdk_2
+            pkgs.python312Packages.sentry-sdk_2
             pkgs.python312Packages.dramatiq
 
             pkgs.python312Packages.pydantic
