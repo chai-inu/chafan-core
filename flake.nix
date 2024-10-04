@@ -40,6 +40,8 @@
             pkgs.python312Packages.html2text
             pkgs.python312Packages.jinja2
             pkgs.python312Packages.pymongo
+            pkgs.python312Packages.alembic
+            pkgs.redis
 
             pkgs.python312Packages.jieba
             pkgs.python312Packages.whoosh
@@ -53,7 +55,6 @@
 
             pkgs.python312Packages.websockets
 
-            pkgs.python312Packages.alembic
 #
 #
             pkgs.postgresql_14
