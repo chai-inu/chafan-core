@@ -1,7 +1,11 @@
+
 # Nix related
 flake.lock
 
+
 # Project specific
+.pqsql.env
+
 .env
 
 # Byte-compiled / optimized / DLL files
