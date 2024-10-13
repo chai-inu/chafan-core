@@ -5,11 +5,10 @@
     #nixpkgs-23.url = "github:nixos/nixpkgs/nixos-22.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
-  outputs = { self, nixpkgs, nixpkgs-unstable, flake-utils}: {
+  outputs = { self, nixpkgs-unstable, flake-utils}: {
     devShell.x86_64-linux =
         let
             pkgs = nixpkgs-unstable.legacyPackages.x86_64-linux;
-            #pkgs_unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
         in pkgs.mkShell {
             LOCALE_ARCHIVE = if pkgs.stdenv.isLinux then "${pkgs.glibcLocales}/lib/locale/locale-archive" else "";
             buildInputs = [
