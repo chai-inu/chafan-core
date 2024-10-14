@@ -73,6 +73,8 @@ class Settings(BaseSettings):
     BACKEND_CORS_ORIGINS: List[str] = []
 
     DEBUG_BYPASS_BACKEND_CORS: str = "false"
+    # TODO Better default value - 2024 Oct
+    CHAFAN_BACKEND_CORS_ORIGINS: str = "https://127.0.0.1:8080"
 
     HCAPTCHA_SITEKEY: str = "10000000-ffff-ffff-ffff-000000000001"
     HCAPTCHA_SECRET: str = "0x0000000000000000000000000000000000000000"

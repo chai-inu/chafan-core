@@ -64,6 +64,8 @@ def set_backend_cors_origins():
     origins = []
     if settings.DEBUG_BYPASS_BACKEND_CORS == 'magic':
         origins.append('*')
+    for host in settings.CHAFAN_BACKEND_CORS_ORIGINS.split(','):
+        origins.append(host)
     app.add_middleware(
         CORSMiddleware,
         allow_origins=origins,
