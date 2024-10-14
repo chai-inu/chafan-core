@@ -12,6 +12,9 @@
         in pkgs.mkShell {
             LOCALE_ARCHIVE = if pkgs.stdenv.isLinux then "${pkgs.glibcLocales}/lib/locale/locale-archive" else "";
             buildInputs = [
+	    pkgs.locale
+	    pkgs.glibcLocales
+
             pkgs.python312
 #            pkgs.poetry
             pkgs.python312Packages.uvicorn
@@ -54,10 +57,8 @@
 
             pkgs.python312Packages.websockets
 
-#
-#
             pkgs.postgresql_14
-            pkgs.pgadmin4
+           # pkgs.pgadmin4
             ];
         };
   };
