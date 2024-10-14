@@ -67,9 +67,12 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 60
     API_SERVER_SCHEME: str = "https"
 
+    # TODO This config is deprecated. To be removed - 2024 Oct
     # BACKEND_CORS_ORIGINS is a JSON-formatted list of origins
     # e.g: '["http://localhost"]'
     BACKEND_CORS_ORIGINS: List[str] = []
+
+    DEBUG_BYPASS_BACKEND_CORS: str = "false"
 
     HCAPTCHA_SITEKEY: str = "10000000-ffff-ffff-ffff-000000000001"
     HCAPTCHA_SECRET: str = "0x0000000000000000000000000000000000000000"
